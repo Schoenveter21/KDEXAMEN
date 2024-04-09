@@ -8,4 +8,19 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/SampleScene.unity
     guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/Scenes/Death.unity
+    guid: 449f98a33690dc74ba8ee301c4fa79f0
+  - enabled: 1
+    path: Assets/Scenes/Hekp.unity
+    guid: 13116b96f58ebf04b9a8342b0da20607
+  - enabled: 1
+    path: Assets/Scenes/Level 2.unity
+    guid: 54577925455d9214b9e5cc7224173469
+  - enabled: 1
+    path: Assets/Scenes/Main Menu.unity
+    guid: 01f1eda4098a5bb48a3e9571494bbb5d
+  - enabled: 1
+    path: Assets/Scenes/The end.unity
+    guid: 989bc17680d476846bb719be73b959b5
   m_configObjects: {}
