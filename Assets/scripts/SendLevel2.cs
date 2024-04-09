@@ -9,7 +9,12 @@ public class SendLevel2 : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            SceneManager.LoadScene("Level 2"); // Laden van de Death-scene
+            SceneManager.LoadScene("Level 2"); // naar level 2 sturen
+            
+        }
+        else
+        {
+            Physics2D.IgnoreCollision(collision.collider, GetComponent<Collider2D>());
         }
     }
 }

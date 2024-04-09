@@ -4,17 +4,19 @@ using UnityEngine;
 
 public class FastEnemyScript : MonoBehaviour
 {
-    public float speed = 2f;
+    public float speed = 8f;
     public float detectionDistance = 1f;
     public LayerMask groundLayer; // Laagmasker voor de grond
     public LayerMask wallLayer; // Laagmasker voor de muur
 
     private bool movingRight = true;
     private Collider2D col;
+    private Animator animator;
 
     void Start()
     {
         col = GetComponent<Collider2D>();
+        animator = GetComponent<Animator>();
     }
 
     void Update()
@@ -36,12 +38,19 @@ public class FastEnemyScript : MonoBehaviour
         // Als de vijand de rand nadert en niet meer op de grond staat, draai dan om
         if ((!leftRaycastHit.collider || !rightRaycastHit.collider) && !IsGrounded())
         {
-            Flip();
+            if (IsWallAhead())
+            {
+                Flip();
+            }
         }
         else if (IsWallAhead())
         {
             Flip();
         }
+
+        // Update de animator met de bewegingssnelheid van de vijand
+        float moveSpeed = Mathf.Abs(speed) * (movingRight ? 1 : -1); // Neem de absolute waarde van de snelheid en pas de richting aan
+        animator.SetFloat("fastenemymove", moveSpeed); // Stel de fastenemymove parameter in de animator in
     }
 
     bool IsGrounded()
@@ -66,6 +75,7 @@ public class FastEnemyScript : MonoBehaviour
         scale.x *= -1;
         transform.localScale = scale;
     }
+
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("Enemy"))

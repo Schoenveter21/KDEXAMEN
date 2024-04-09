@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 8333312767830286518}
   - component: {fileID: 768606836810008252}
   - component: {fileID: 4501595915535186908}
+  - component: {fileID: 8867597869397989484}
   m_Layer: 0
   m_Name: Idle (32x32)_0 (1)
   m_TagString: Enemy
@@ -180,15 +181,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d2c4c7032374d4947ab70f8c9f2e5988, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 2
+  speed: 8
   detectionDistance: 1
   groundLayer:
     serializedVersion: 2
     m_Bits: 8
   wallLayer:
     serializedVersion: 2
-    m_Bits: 64
-  knockbackForce: 20
+    m_Bits: 0
 --- !u!61 &4501595915535186908
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -234,3 +234,24 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 0.1}
   m_EdgeRadius: 0
+--- !u!95 &8867597869397989484
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6784605072543548840}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 692c57e3fdd8e8b42ba85c2699a4bb20, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
