@@ -9,7 +9,7 @@ public class Gefeliciteerd : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            SceneManager.LoadScene("The end"); // naar level 2 sturen
+            SceneManager.LoadScene("The end"); // naar het einde
 
         }
         else
