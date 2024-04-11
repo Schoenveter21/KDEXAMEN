@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 4005609296202952980}
   - component: {fileID: 5583012418676973233}
   - component: {fileID: 8503268462085424920}
+  - component: {fileID: -5742922967440916257}
   m_Layer: 0
   m_Name: End (Idle)
   m_TagString: Untagged
@@ -73,7 +74,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 2
   m_Sprite: {fileID: 21300000, guid: 207a671705d995649ba081418a0afa31, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -139,3 +140,24 @@ PolygonCollider2D:
       - {x: 0.25, y: -0.12}
       - {x: 0.25, y: 0.099999994}
   m_UseDelaunayMesh: 0
+--- !u!95 &-5742922967440916257
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1931990950843025970}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 79ae99200a4645e45b817b1882f71c70, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0

@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerHealth : MonoBehaviour
 {
@@ -21,7 +22,7 @@ public class PlayerHealth : MonoBehaviour
         currentHealth -= damageAmount; // Verminder de huidige gezondheid met het opgegeven schadebedrag
         UpdateUI(); // Werk de UI bij om de nieuwe gezondheid weer te geven
 
-        if (currentHealth == 0)
+        if (currentHealth < 0)
         {
             Die(); // Als de gezondheid van de speler nul of minder is, roep de Die methode aan
         }
@@ -37,6 +38,7 @@ public class PlayerHealth : MonoBehaviour
     void Die()
     {
         // Voeg hier eventueel extra logica toe die moet worden uitgevoerd wanneer de speler sterft
+        SceneManager.LoadScene("Death");
         Destroy(gameObject);
         Debug.Log("Player died!");
     }

@@ -80,7 +80,13 @@ public class FastEnemyScript : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Enemy"))
         {
+            // Negeer de botsing als de vijand een andere vijand raakt
             Physics2D.IgnoreCollision(collision.collider, GetComponent<Collider2D>());
+        }
+        else if (collision.gameObject.CompareTag("Player"))
+        {
+            // Flip de richting van de vijand als deze de speler raakt
+            Flip();
         }
     }
 }
