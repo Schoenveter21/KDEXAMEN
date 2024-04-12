@@ -22,7 +22,7 @@ public class PlayerHealth : MonoBehaviour
         currentHealth -= damageAmount; // Verminder de huidige gezondheid met het opgegeven schadebedrag
         UpdateUI(); // Werk de UI bij om de nieuwe gezondheid weer te geven
 
-        if (currentHealth < 0)
+        if (currentHealth <= 0)
         {
             Die(); // Als de gezondheid van de speler nul of minder is, roep de Die methode aan
         }
